@@ -4,37 +4,40 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Instagram Feed with Bootstrap</title>
+        <script src="https://kit.fontawesome.com/3f684eb49b.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
     </header>
     <body>
         <div class="container-fluid">
-            <div class="row"></div>
-                <ul class="nav nav-tabs">
+            <div class="row "></div>
+                <ul class="nav nav-tabs py-1 bg-light align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">
-                            <i></i>
-                            Instagram
+                        <a class="nav-link disabled fw-bold" href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                            <strong>Instagram</strong>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Create a new post
-                        </button>
-                    </li>                    
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              picture of a gear
+                    <div class="ms-auto d-flex">
+                        <li class="nav-item align-self-end">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Create a new post
                             </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Profile</a></li>
-                              <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                              <li><a class="dropdown-item text-danger border-top" href="#">Log out</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                        </li>                    
+                        <li class="nav-item align-self-end">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                  <li><a class="dropdown-item text-danger border-top" href="#">Log out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -48,15 +51,15 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="row">
-                        <div class="row">
+                        <div class="row p-0">
                             <h5>Caption:</h5>
                         </div>
                         <div class="row">
-                            <input type="text" class="pb-5">
+                            <input type="text" placeholder="Add the caption of your post here" class="pb-5">
                         </div>
-                        <div class="row">
-                            <i></i>
-                            <i></i>
+                        <div class="row ">
+                            <div class="col-1 border pt-1 pb-1 mt-1 me-1 justify-content-center"><i class="fa-solid fa-camera"></i></div>
+                            <div class="col-1 border pt-1 pb-1 mt-1 me-1 justify-content-center"><i class="fa-solid fa-location-pin"></i></div>
                         </div>
                     </div>
                 </div>
@@ -67,58 +70,78 @@
             </div>
             </div>
         </div>
-        <ul class="nav nav-pills col-2 mx-auto" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills justify-content-center py-1" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-multi-tab" data-bs-toggle="pill" data-bs-target="#pills-multi" type="button" role="tab" aria-controls="pills-multi" aria-selected="true">multi</button>
+              <button class="nav-link active" id="pills-multi-tab" data-bs-toggle="pill" data-bs-target="#pills-multi" type="button" role="tab" aria-controls="pills-multi" aria-selected="true">
+                <i class="fa-solid fa-table-cells"></i>
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-single-tab" data-bs-toggle="pill" data-bs-target="#pills-single" type="button" role="tab" aria-controls="pills-single" aria-selected="false">single</button>
+              <button class="nav-link" id="pills-single-tab" data-bs-toggle="pill" data-bs-target="#pills-single" type="button" role="tab" aria-controls="pills-single" aria-selected="false">
+                <i class="fa-solid fa-square-full"></i>
+              </button>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-multi" role="tabpanel" aria-labelledby="pills-multi-tab" tabindex="0">
-                <div id="grid-view" class="mx-auto col-6">
+                <div id="grid-view" class="mx-auto col-9">
                     <div class="row">
-                        <div class="col p-0 m-1"><img src="pexels-belle-co-99483-847393.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-chevanon-325045.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-lestrade84-17811.jpg" class="image">></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-belle-co-99483-847393.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-chevanon-325045.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-lestrade84-17811.jpg" class="image">></div>
                     </div>
                     <div class="row">
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-34231.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-45853.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-47547.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-34231.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-45853.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-47547.jpg" class="image"></div>
                     </div>
                     <div class="row">
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-50577.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-67552.jpg" class="image"></div>
-                        <div class="col p-0 m-1"><img src="pexels-pixabay-86405.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-50577.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-67552.jpg" class="image"></div>
+                        <div class="col p-0 m-1 tile"><img src="pexels-pixabay-86405.jpg" class="image"></div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-single" role="tabpanel" aria-labelledby="pills-single-tab" tabindex="0">
                 <div id="single-view" class="mx-auto col-6">
                     <div class="card p-0 m-1">
-                        <div class="row">
-                            <h5 class="col">Title</h5>
-                            <div class="col date">
+                        <div class="row p-1">
+                            <h5 class="col m-1">Title</h5>
+                            <div class="col-2 fs-4">
                                 8/24
                             </div>
                         </div>
                         <img src="pexels-belle-co-99483-847393.jpg" class="image">
-                        <p><strong>204 Likes</strong></p>
-                        <p>This is a picture</p>
+                        <div class="m-2">
+                            <p><strong>204 Likes</strong></p>
+                            <p>This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture This is a picture</p>
+                        </div>
                     </div>
                     <div class="card p-0 m-1">
-                        <h5>Title</h5>
+                        <div class="row p-1">
+                            <h5 class="col m-1">Title</h5>
+                            <div class="col-2 fs-4">
+                                8/25
+                            </div>
+                        </div>
                         <img src="pexels-chevanon-325045.jpg" class="image">
-                        <p><strong>204 Likes</strong></p>
-                        <p>This is a picture</p>
+                        <div class="m-2">
+                            <p><strong>204 Likes</strong></p>
+                            <p>This is a picture</p>
+                        </div>
                     </div>
                     <div class="card p-0 m-1">
-                        <h5>Title</h5>
-                        <img src="pexels-lestrade84-17811.jpg" class="image">>
-                        <p><strong>204 Likes</strong></p>
-                        <p>This is a picture</p>
+                        <div class="row p-1">
+                            <h5 class="col m-1">Title</h5>
+                            <div class="col-2 fs-4">
+                                8/26
+                            </div>
+                        </div>
+                        <img src="pexels-lestrade84-17811.jpg" class="image">
+                        <div class="m-2">
+                            <p><strong>204 Likes</strong></p>
+                            <p>This is a picture</p>
+                        </div>
                     </div>
                 </div>
             </div>
